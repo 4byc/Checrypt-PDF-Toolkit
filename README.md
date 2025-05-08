@@ -1,80 +1,89 @@
+# Checrypt
 
-# Checrypt Toolkit 🔐
+**Checrypt** is a simple, GUI-based PDF security toolkit built with Python and Tkinter. It offers a convenient way to encrypt, decrypt, split, merge, and edit PDF metadata — all in one executable tool.
 
-A lightweight, offline PDF encryption and decryption toolkit with a GUI built in Python using Tkinter.
+## 🔧 Features
 
-## 📦 Features
+- 🔐 Unlock encrypted PDFs
+- 🔒 Apply password protection
+- ✂️ Split PDF into individual pages
+- 🧩 Merge multiple PDFs
+- 📝 Edit PDF metadata (author, title, etc.)
+- 🚫 Bypass restrictions (for non-DRM content)
+- ✅ Simple GUI interface (no command line needed)
 
-- Encrypt PDF files with a password
-- Decrypt password-protected PDFs
-- Drag and drop file support
-- User-friendly graphical interface (Tkinter)
+## 📁 Project Structure
 
-## 🚀 Getting Started
+```
+Checrypt/
+├── build/
+│   └── Checrypt/
+│       └── localpycs/
+├── checrypt/
+│   ├── __pycache__/
+│   ├── features/
+│   │   ├── __init__.py
+│   │   ├── bypass.py
+│   │   ├── edit.py
+│   │   ├── merge.py
+│   │   ├── metadata.py
+│   │   ├── split.py
+│   │   └── unlock.py
+│   ├── __init__.py
+│   ├── gui.py
+│   ├── main.py
+│   └── utils.py
+├── dist/
+│   └── Checrypt.exe
+├── Checrypt.spec
+├── README.md
+├── requirements.txt
+└── setup.py
+```
 
-### Requirements
+## 🚀 How to Run
 
-- Python 3.10+
-- Tkinter (usually included with Python)
-- PyPDF2
+### 1. Clone the Repository
 
-Install the dependencies:
+```bash
+git clone https://github.com/yourusername/checrypt.git
+cd checrypt
+```
+
+### 2. Install Dependencies
+
+> It's recommended to use a virtual environment.
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Run Locally
+### 3. Run the App (Development Mode)
 
 ```bash
-python main.py
+python checrypt/main.py
 ```
 
-### Build to `.exe`
+---
 
-Install PyInstaller:
+## 📦 Build to Executable (Windows)
+
+Make sure you have `pyinstaller` installed:
 
 ```bash
 pip install pyinstaller
 ```
 
-Then:
+Then run:
 
 ```bash
-pyinstaller --onefile --windowed --name Checrypt --add-data "checrypt;checrypt" main.py
+pyinstaller --onefile --windowed --name Checrypt --add-data "checrypt;checrypt" checrypt/main.py
 ```
 
-## 📁 Folder Structure
+The `.exe` will be created in the `dist/` folder.
 
-```
-checrypt/
-├── core.py        # Main logic (encrypt/decrypt)
-├── gui.py         # Tkinter GUI interface
-├── pdf_tools.py   # PDF utilities
-├── utils.py       # Helper functions
-main.py            # Entry point
-```
+---
 
-## 📝 License
+## 📃 License
 
-MIT License
-
-Copyright (c) 2025 Cheque — 4byc & Team
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the “Software”), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+This project is licensed under the [MIT License](LICENSE) — made with ❤️ by 4byc & team.
